@@ -1,0 +1,23 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/sample")
+public class SampleController {
+	
+	
+	@GetMapping("/message")
+	public Model getMessage(Model model) {
+		
+		System.out.println("inside the get message method");
+		
+		model.addAttribute("Welcome to Spring");
+		
+		return model;
+	}
+
+}
